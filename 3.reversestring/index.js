@@ -7,6 +7,7 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 function reverse(str = '') {
+  // debugger; // run node file.js // write continue/c/cont // repl to (read, edit, etc) to inspect variables
   // return str.split('').reduce((reversed, currentLetter) => currentLetter + reversed, '');
   // return str.split('').reverse().join('');
   return str.split('').reduceRight((reversed, currentLetter) => reversed + currentLetter, '')
