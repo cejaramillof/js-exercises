@@ -6,11 +6,10 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {
-  const letters = str?.split('');
-  return letters?.reduceRight((finalWord, currentLetter) => {
-    return finalWord += currentLetter;
-  }, '')
+function reverse(str = '') {
+  // return str.split('').reduce((finalWord, currentLetter) => currentLetter + finalWord, '');
+  // return str.split('').reverse().join('');
+  return str.split('').reduceRight((finalWord, currentLetter) => finalWord + currentLetter, '')
 
   /*
   let newWord = [];
@@ -18,6 +17,14 @@ function reverse(str) {
     newWord.push(letters[letter]);
   };
   return newWord.join('');
+  */
+
+  /*
+  let reversed = '';
+  for (let character of str) {
+    reversed = character + reversed;
+  }
+  return reversed;
   */
 }
 
