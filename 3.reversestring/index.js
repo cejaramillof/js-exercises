@@ -7,9 +7,9 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 function reverse(str = '') {
-  // return str.split('').reduce((finalWord, currentLetter) => currentLetter + finalWord, '');
+  // return str.split('').reduce((reversed, currentLetter) => currentLetter + reversed, '');
   // return str.split('').reverse().join('');
-  return str.split('').reduceRight((finalWord, currentLetter) => finalWord + currentLetter, '')
+  return str.split('').reduceRight((reversed, currentLetter) => reversed + currentLetter, '')
 
   /*
   let newWord = [];
