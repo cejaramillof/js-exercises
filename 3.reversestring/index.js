@@ -8,9 +8,9 @@
 
 function reverse(str = '') {
   // debugger; // run node inspect index.js // write continue/c/cont // repl to (read, edit, etc) to inspect variables
-  // return str.split('').reduce((reversed, currentLetter) => currentLetter + reversed, '');
-  // return str.split('').reverse().join('');
-  return str.split('').reduceRight((reversed, currentLetter) => reversed + currentLetter, '')
+  // return str?.split('').reduce((reversed, currentLetter) => currentLetter + reversed, '');
+  // return str?.split('').reverse().join('');
+  return str?.split('').reduceRight((reversed, currentLetter) => reversed + currentLetter, '')
 
   /*
   let newWord = [];

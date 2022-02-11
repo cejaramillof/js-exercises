@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest 3.rev --watch",
+    "debug": "node inspect 3.reversestring/index.js"
   },
   "jest": {
     "testEnvironment": "node"
