@@ -16,6 +16,7 @@ function reverseInt(n) {
   return (n >= 0) ? reversedNumber : reversedNumber * - 1;
   */
 
+  /*
   const reversed = n
     .toString()
     .split('')
@@ -23,7 +24,29 @@ function reverseInt(n) {
     .join('');
 
     return parseInt(reversed) * Math.sign(n);
+  */
 
+  const digits = [];
+  // let i = 0;
+
+  let number = n * Math.sign(n);
+
+  const numberLength = Math.ceil(Math.log10(number + 1));
+
+  let finalNumber = 0;
+
+  while (number > 0) {
+    const currentNumber = number % 10;
+
+    // finalNumber += currentNumber * 10 ** (numberLength - i - 1);
+    // i += 1;
+
+    finalNumber += currentNumber * 10 ** (numberLength - digits.length - 1);
+    digits.push(currentNumber);
+
+    number = Math.trunc(number / 10);
+  }
+  return finalNumber * Math.sign(n)
 }
 
 module.exports = reverseInt;
