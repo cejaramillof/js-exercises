@@ -15,8 +15,15 @@ function maxChar(word) {
   for (let char of str) {
     // charMap[char] = charMap[char] ? charMap[char] + 1 : 1;
     charMap[char] = charMap[char] + 1 || 1; // falsy
+
+    // if (charMap[char] <= max) continue;
+    if (charMap[char] < max) continue;
+
+    max = charMap[char];
+    maxChar = char;
   }
 
+  /*
   for (let char in charMap) {
     if (charMap[char] <= max) continue;
 
@@ -25,6 +32,7 @@ function maxChar(word) {
     max = charMap[char];
     maxChar = char;
   }
+  */
 
   return maxChar;
 }
