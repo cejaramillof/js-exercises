@@ -13,7 +13,8 @@ function maxChar(word) {
   let maxChar = '';
 
   for (let char of str) {
-    charMap[char] = charMap[char] ? charMap[char] + 1 : 1;
+    // charMap[char] = charMap[char] ? charMap[char] + 1 : 1;
+    charMap[char] = charMap[char] + 1 || 1; // falsy
   }
 
   for (let char in charMap) {
