@@ -10,6 +10,8 @@
 
 function anagrams(stringA, stringB) {
   /*
+  return cleanString(stringA) === cleanString(stringB);
+  */
   const aCharMap = buildCharMap(stringA);
   const bCharMap = buildCharMap(stringB);
 
@@ -18,14 +20,13 @@ function anagrams(stringA, stringB) {
 
   if (aCharList.length !== bCharList.length) return false;
   return aCharList.every((char) => aCharMap[char] === bCharMap[char])
- */
-  return cleanString(stringA) === cleanString(stringB);
 }
 
 function buildCharMap(str) {
   const charMap = {};
+  const cleanedString = str.replace(/[^\w]/g, '').toLowerCase();
 
-  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+  for (let char of cleanedString) {
     charMap[char] = charMap[char] + 1 || 1;
   }
 
