@@ -1,3 +1,4 @@
+// https://kata-log.rocks/fizz-buzz-kata
 // --- Directions
 // Write a program that console logs the numbers
 // from 1 to n. But for multiples of three print
@@ -15,7 +16,8 @@
 const fizzBuzzBase = (min = 0) => (max = 100) => (num) => {
   if (typeof num !== 'number') return 'not-number'
   if (num < min || num > max) return 'number-not-allowed';
-  if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
+  if (num % 15 === 0) return 'fizzbuzz';
+  // if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
   if (num % 3 === 0) return 'fizz';
   if (num % 5 === 0) return 'buzz';
   return num;
